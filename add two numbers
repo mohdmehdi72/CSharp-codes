@@ -1,0 +1,13 @@
+static void Main(string[] args)
+{
+Console.WriteLine("enter the first number");
+                int a = int.Parse(Console.ReadLine());
+                Console.WriteLine("enter the second number");
+                int b = int.Parse(Console.ReadLine());
+                int c;
+
+
+                c=a + b;
+
+                Console.WriteLine("the result is: "+c);
+}
