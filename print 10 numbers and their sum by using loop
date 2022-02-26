@@ -1,0 +1,11 @@
+static void Main(string[] args)
+{
+  int add = 0;
+            for (int a = 1; a <= 10; a++)
+            {
+                Console.Write(a);
+                add = add + a;
+
+            }
+            Console.WriteLine("the sum is " + add);
+}
