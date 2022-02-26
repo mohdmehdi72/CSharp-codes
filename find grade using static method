@@ -1,0 +1,44 @@
+static int Register(int a, int b, int c)
+            {
+                int total = a + b + c;
+
+                return total;
+            }
+            static float Percantage(float getvalue)
+            {
+
+                float per = getvalue * 100 / 300;
+                return per;
+            }
+            static void grade(float grad)
+            {
+                if (grad >= 80)
+                {
+                    Console.WriteLine("Grade A");
+                }
+                else if (grad >= 65)
+                {
+                    Console.WriteLine("Grade B");
+                }
+                else if (grad >= 40)
+                {
+                    Console.WriteLine("Grade C");
+                }
+                else
+                {
+                    Console.WriteLine("fail");
+                }
+
+
+            }
+
+static void Main(string[] args)
+{
+            int value = Register(50, 60, 87);
+            float grad = Percantage(value);
+            Console.WriteLine("the total is {0}", value);
+            Console.WriteLine("The percentage is {0}", grad);
+
+            grade(grad);
+
+}
