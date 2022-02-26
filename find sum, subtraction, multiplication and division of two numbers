@@ -1,0 +1,32 @@
+static void Main(string[] args)
+{
+Console.WriteLine("Enter the first number");
+            int fir = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the second number");
+            int sec = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("a for addition, b for substraction, c for muliplication and d for division");
+            Console.WriteLine("please enter your choice");
+            char choice = char.Parse(Console.ReadLine());
+
+            switch (choice)
+            {
+                case 'a':
+                    Console.WriteLine(fir + sec);
+                    break;
+                case 'b':
+                    Console.WriteLine(fir - sec);
+                    break;
+
+                case 'c':
+                    Console.WriteLine(fir * sec);
+                    break;
+                case 'd':
+                    Console.WriteLine(fir / sec);
+                    break;
+                default:
+
+                    Console.WriteLine("Wrong Choice");
+                    break;
+            }
+}
