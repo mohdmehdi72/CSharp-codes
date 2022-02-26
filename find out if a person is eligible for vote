@@ -1,0 +1,13 @@
+static void Main(string[] args)
+{
+Console.WriteLine("enter your age");
+            int age = int.Parse(Console.ReadLine());
+            if (age >= 18)
+            {
+                Console.WriteLine("your eligible for vote");
+            }
+            else
+            {
+                Console.WriteLine("your not eligible for vote");
+            }
+}
