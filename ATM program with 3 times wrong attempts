@@ -1,0 +1,68 @@
+static void Main(string[] args)
+{
+            int bal = 15000;
+            int i = 0;
+            string cpin = "1234";
+            while (i < 3)
+            {
+                Console.WriteLine("Please enter your password to get in");
+
+                i++;
+                string pin = (Console.ReadLine());
+
+
+                if (pin == cpin)
+                {
+                    i = 4;
+                    Console.WriteLine("Press 1 to check balance, Press 2 to debit, Press 3 to credit");
+                    int inp = int.Parse(Console.ReadLine());
+                    switch (inp)
+                    {
+                        case 1:
+                            Console.WriteLine(bal);
+                            break;
+                        case 2:
+                            Console.WriteLine("Please enter the amount to debit");
+                            int deb = int.Parse(Console.ReadLine());
+                            if (bal > deb)
+                            {
+
+                                int netbal = bal - deb;
+                                Console.WriteLine("the Remaining amount is " + netbal);
+
+                            }
+                            else
+                            {
+                                Console.WriteLine("insufficient balance!!!");
+                            }
+                            break;
+
+                        case 3:
+                            Console.WriteLine("Please enter the amount to credit");
+                            int cre = int.Parse(Console.ReadLine());
+                            int totbal = bal + cre;
+                            Console.WriteLine("The total amount is " + totbal);
+                            break;
+                    }
+                }
+                else if (i == 3)
+                {
+                    Console.WriteLine("You have exceed the max number of tries! please resatrt the program and try again");
+                }
+                else
+                {
+                    Console.WriteLine("wrong password!");
+                    Console.WriteLine("do you want to change pin? Press 1 to change. \npress any key to retry");
+                    string chanpin = (Console.ReadLine());
+
+                    if (chanpin == "1")
+                    {
+                        Console.WriteLine("enter your new pin");
+                        cpin = (Console.ReadLine());
+                        Console.WriteLine("Successfully changed!");
+                        i = 0;
+                    }
+                }
+
+            }
+}
