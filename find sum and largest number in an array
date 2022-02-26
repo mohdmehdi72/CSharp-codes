@@ -1,0 +1,23 @@
+static void add(int[] a)
+            {
+
+                int sum = 0;
+                int largest = 0;
+                for (int i = 0; i < a.Length; i++)
+                {
+                    sum += a[i];
+                    Console.WriteLine(a[i]);
+                    if (largest < a[i])
+                    {
+                        largest = a[i];
+                    }
+                }
+
+                Console.WriteLine("the sum of array is " + sum + Environment.NewLine + "the largest number is " + largest);
+
+            }
+static void Main(string[]args )
+{
+  int[] da = { 34, 43, 54, 65 };
+  add(da);
+}
