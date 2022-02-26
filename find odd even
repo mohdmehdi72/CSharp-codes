@@ -1,0 +1,12 @@
+            
+            Console.WriteLine("enter a number");
+            int num = int.Parse(Console.ReadLine());
+            
+            if (num % 2 == 0)
+            {
+                Console.WriteLine("this is Even: "+ num);
+            }
+            else
+            {
+                Console.WriteLine("this is odd: "+num);
+            }
