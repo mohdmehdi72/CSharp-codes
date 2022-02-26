@@ -1,0 +1,39 @@
+static void Main(string[] args)
+{
+
+            int bal = 25000;
+            int pin = 1234;
+            Console.WriteLine("enter your pin");
+            int epin = int.Parse(Console.ReadLine());
+            if (pin == epin)
+            {
+                Console.WriteLine("1 for check bal, 2 for withdraw money, 3 for add money");
+                int choice = int.Parse(Console.ReadLine());
+                switch (choice)
+                {
+                    case 1:
+                        Console.WriteLine("your balance is: " + bal);
+                        break;
+                    case 2:
+                        Console.WriteLine("enter amount to debit");
+                        int deb = int.Parse(Console.ReadLine());
+                        int netbal = bal - deb;
+                        Console.WriteLine("remaining balance is: " + netbal);
+                        break;
+                    case 3:
+                        Console.WriteLine("enter amount to credit");
+                        int cred = int.Parse(Console.ReadLine());
+                        netbal = bal + cred;
+                        Console.WriteLine("updated balance: " + netbal);
+                        break;
+                    default:
+                        Console.WriteLine("wrong input");
+                        break;
+                }
+            }
+            else
+            {
+                Console.WriteLine(" you have entered wrong Pin");
+            }
+
+}
