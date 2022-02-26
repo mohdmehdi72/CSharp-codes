@@ -1,0 +1,36 @@
+static void Main(string[] args)
+{
+
+            Console.WriteLine("enter your roll number");
+            int roll = int.Parse(Console.ReadLine());
+            Console.WriteLine("enter your name");
+            string na = Console.ReadLine();
+
+            Console.WriteLine("enter your marks");
+            int hi = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("enter your marks");
+            int ma = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("enter your marks");
+            int en = int.Parse(Console.ReadLine());
+            int total = hi + ma + en;
+            float per = total * 100 / 300;
+
+            if (total >= 200)
+            {
+                Console.WriteLine("The roll number " + roll + " " + na + " grade is A " + per + "%");
+            }
+            else if (total >= 150)
+            {
+                Console.WriteLine("The roll number " + roll + " " + na + " grade is B " + per + "%");
+            }
+            else if (total >= 100)
+            {
+                Console.WriteLine("Roll number " + roll + " " + na + " grade is C " + per + "%");
+            }
+            else
+            {
+                Console.WriteLine("fail");
+            }
+}
